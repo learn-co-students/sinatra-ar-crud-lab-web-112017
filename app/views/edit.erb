@@ -1,0 +1,9 @@
+<!-- This view should contain a form to update a
+specific blog post and POSTs to a controller action,
+ patch '/posts/:id' -->
+<form action='/posts/<%=@post.id%>' method="post">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  <input type="text" id="name" name="post[name]" placeholder="Name" value="<%=@post.name%>">
+  <input type="text" id="content" name="post[content]" placeholder="Content" value="<%=@post.content%>">
+  <input type="submit" id="submit" value="Submit">
+</form>
