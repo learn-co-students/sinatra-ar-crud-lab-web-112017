@@ -1,0 +1,10 @@
+<h1>blog blog blog blog blog</h1>
+
+<h2>All Posts</h2>
+<%@posts.each do |post|%>
+<div>
+  <p> <a href="/posts/<%=post.id%>"> <%=post.name%></a></p>
+</div>
+<%end%>
+
+<a href="/posts/new">Create A New Post</a>
