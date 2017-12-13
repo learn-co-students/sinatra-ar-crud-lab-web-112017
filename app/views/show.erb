@@ -1,0 +1,16 @@
+
+
+<p> Name: <%= @post.name%> <br>
+    Content: <%= @post.content%> <br>
+</p>
+<form method="POST" action="/posts/<%=@post.id%>/delete">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete">
+</form>
+
+<a href="/posts">All Posts</a>
+<a href="/posts/new">New Post</a>
+<a href="/posts/<%=@post.id%>/edit">Edit This Post</a>
+
+
+<!-- The Delete CRUD action corresponds to the delete controller action, delete '/posts/:id/delete'. To initiate this action, we'll just add a "delete button" to the show page. This "button" will actually be a form, disguised as a button (intriguing, I know). The form will send a POST request to the delete controller action, where we will identify the post to delete and delete it. Then, the action should render a delete.erb view which confirms that the post has been deleted. -->
