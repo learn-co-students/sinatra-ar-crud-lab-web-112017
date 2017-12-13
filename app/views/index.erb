@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Blog Posts</title>
+  </head>
+  <body>
+    <h1>Blog Posts</h1>
+    <p>Click <a href="/posts/new">here</a> to create a new post!
+    <p><ul>
+      <p><% @posts.each do |post| %>
+        <li><%=post.name %></li>
+        <%=post.content %>
+        <br>
+            <%end%>
+    </ul>
+
+  </body>
+</html>
