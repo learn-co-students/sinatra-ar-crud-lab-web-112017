@@ -1,0 +1,12 @@
+<h1>"blog blog blog blog blog"</h1>
+<h2>All Posts</h2>
+<% @posts.each do |post| %>
+  <a href="/posts/<%=post.id%>">
+  <%= post.name %> </a>
+<% end %>
+
+<a href="/posts/new">Create a New Post</a>
+
+
+
+<!-- Then, it should render the index.erb view. That view should use erb to iterate over @posts and render them on the page. -->
