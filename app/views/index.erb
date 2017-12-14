@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+<ul>
+<% @posts.map do |post| %>
+<li> <%= post.name %><br>
+<%= post.content %> </li>
+<% end %>
+</ul>
+
+
+</body>
+
+</html>
