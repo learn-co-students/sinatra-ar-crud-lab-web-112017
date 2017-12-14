@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CRUD</title>
+  </head>
+  <body>
+    <h1>Posts</h1>
+
+    <h3><% if @posts == [] %>
+      <%="No posts yet." %>
+      <% else %>
+        <% @posts.each do |post|%>
+
+          <a href="/posts/<%= post[:id] %>"><%= post[:name] %></a> | <%=post[:content] %><br>
+
+            <% end %>
+        <% end %></h3>
+
+
+
+
+
+
+  </body>
+</html>
